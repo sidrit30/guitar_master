@@ -1,0 +1,70 @@
+-- USERS TABLE
+CREATE TABLE users (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(50) UNIQUE NOT NULL,
+    profile_picture VARCHAR(255),
+    email VARCHAR(100) UNIQUE NOT NULL,
+    password_hash VARCHAR(255) NOT NULL,
+    role_id TINYINT NOT NULL DEFAULT 2, -- 1: admin, 2: user
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+-- TABS TABLE
+CREATE TABLE tabs (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    author_id INT NOT NULL,
+    file_path VARCHAR(255) NOT NULL,
+    difficulty ENUM('beginner', 'intermediate', 'advanced') NOT NULL,
+    genre VARCHAR(50),
+    song_name VARCHAR(100) NOT NULL,
+    artist_name VARCHAR(100),
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (author_id) REFERENCES users(id)
+);
+
+-- RATINGS TABLE
+CREATE TABLE ratings (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT NOT NULL,
+    tab_id INT NOT NULL,
+    rating TINYINT NOT NULL CHECK (rating BETWEEN 1 AND 5),
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE(user_id, tab_id),
+    FOREIGN KEY (user_id) REFERENCES users(id),
+    FOREIGN KEY (tab_id) REFERENCES tabs(id)
+);
+
+-- COMMENTS TABLE
+CREATE TABLE comments (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT NOT NULL,
+    tab_id INT NOT NULL,
+    comment TEXT NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id),
+    FOREIGN KEY (tab_id) REFERENCES tabs(id)
+);
+
+-- FAVORITES TABLE
+CREATE TABLE favorites (
+    user_id INT NOT NULL,
+    tab_id INT NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (user_id, tab_id),
+    FOREIGN KEY (user_id) REFERENCES users(id),
+    FOREIGN KEY (tab_id) REFERENCES tabs(id)
+);
+
+-- BANNED USERS TABLE
+CREATE TABLE banned_users (
+    email VARCHAR(100) UNIQUE NOT NULL,
+    PRIMARY KEY (email)
+);
+
+-- TOKENS TABLE (for password reset or email verification, etc.)
+CREATE TABLE tokens (
+    user_id INT NOT NULL,
+    token VARCHAR(255) UNIQUE NOT NULL,
+    PRIMARY KEY (user_id, token),
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);

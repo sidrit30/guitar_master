@@ -1,0 +1,136 @@
+[Tab]
+
+
+ abc
+
+e|------------------------------------------------------------|
+
+B|-0---1--0---1-0--0---1---------0---1--0---1-0--0---1--------|
+
+G|---2------2--------2------1------2------2--------2----------|
+
+D|------------------------4----------------------------4-2----|
+
+A|------------------------------------------------------------|
+
+E|------------------------------------------------------------|
+
+ 
+[Chord]
+
+
+Intro: 
+
+                         Am  B7
+
+A thu eshte ma leht pa dhimbje
+
+                   Em
+
+A thu ma bukur pa lote
+
+                   Am B7                      Em
+
+A thu ti ke me u kthye dhe prap me qene na te dy
+
+                    Am B7                    Em
+
+A thu eshte fati i tille thuej gjithmone me vujtje
+
+                     Am  B7                        Em
+
+A thu´e ti do t´me kthehesh dhe prap me qene na te dy
+
+ 
+
+Intro
+
+
+                        Am  B7
+
+Ndoshta t´atille e kam fatin
+
+                      Em
+
+Ndoshta gjithmone me vujtje
+
+                             Am  B7
+
+Ndoshta ti kurre sdo t´me kthehesh
+
+                        Em
+
+Edhe kjo ngjan ne kete jete
+
+ 
+
+                  Am B7
+
+Cdo gje kalon ne jete
+
+                          Em  C
+
+At´her dhe dielli kur te lind
+
+                             Am B7
+
+Mbas diellit prap shi do te kete
+
+                       E
+
+keshtu eshte ne te vertete
+
+ 
+
+                        Am  B7
+
+Ndoshta t´atille e kam fatin
+
+                      Em
+
+Ndoshta gjithmone me vujtje
+
+                             Am  B7
+
+Ndoshta ti kurre sdo t´me kthehesh
+
+                        Em
+
+Edhe kjo ngjan ne kete jete
+
+ 
+
+
+                  Am B7
+
+Cdo gje kalon ne jete
+
+                          Em  C
+
+At´her dhe dielli kur te lind
+
+                             Am B7
+
+Mbas diellit prap shi do te kete
+
+                       E
+
+keshtu eshte ne te vertete
+
+ 
+
+
+Intro:
+ 
+
+                        Am  B7
+
+Ndoshta me asht fati i tille
+
+                      Em
+
+Ndoshta gjithmone me vujtje
+
+                             Am  B7
+
+Ndoshta ti kurre s'ke me u kthye
