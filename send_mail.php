@@ -18,13 +18,13 @@ function send_mail($to, $username, $password): void
         $mail->isSMTP();                                            //Send using SMTP
         $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
         $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-        $mail->Username   = 'guitar.master.tabs@gmail.com';                     //SMTP username
-        $mail->Password   = 'inrd yyam gnmw xfzc';                               //SMTP password
+        $mail->Username   = 'your email address';                     //SMTP username
+        $mail->Password   = 'your app password';                               //SMTP password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
         $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
 //Recipients
-        $mail->setFrom('guitar.master.tabs@gmail.com', 'Guitar Master');
+        $mail->setFrom('your email address', 'Guitar Master');
         $mail->addAddress($to);     //Add a recipient
 
 
@@ -53,13 +53,13 @@ function ban_mail($to): void
         $mail->isSMTP();                                            //Send using SMTP
         $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
         $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-        $mail->Username   = 'guitar.master.tabs@gmail.com';                     //SMTP username
-        $mail->Password   = 'inrd yyam gnmw xfzc';                               //SMTP password
+        $mail->Username   = 'email';                     //SMTP username
+        $mail->Password   = 'super secret pass';                               //SMTP password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
         $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
 //Recipients
-        $mail->setFrom('guitar.master.tabs@gmail.com', 'Guitar Master');
+        $mail->setFrom('email', 'Guitar Master');
         $mail->addAddress($to);     //Add a recipient
 
 
